@@ -1,4 +1,10 @@
-## Clone this repo
+## Time and distance calculator
+
+Tools for searching time and distance with multiple waypoint by Google Distance Matrix API.
+
+Created by php-lumen, redis, run on docker.
+
+### Clone this repo
 
 ```bash
 git clone https://github.com/stanleybz/matt-tress.git
