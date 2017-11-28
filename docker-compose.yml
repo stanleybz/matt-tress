@@ -1,0 +1,32 @@
+nginx:
+  build: images/nginx
+  command: nginx -g "daemon off;"
+  links:
+    - php
+  ports:
+    - "80:80"
+php:
+  user: "${UID}"
+  build: images/php
+  volumes:
+    - ./app:/var/www/html/app
+  working_dir: /var/www/html/app/public
+  command: php-fpm
+  links:
+    - redis
+  ports:
+    - "9000:9000"
+  environment:
+    APP_ENV: local
+    APP_DEBUG: 'true'
+    APP_TIMEZONE: UTC
+    MAX_TIMEOUT: 240
+    GOOGLE_MAP_KEY: AIzaSyA_ORU75g2w6YxQBjgQx_E0iqRNzP1k-MI
+    CACHE_DRIVER: array
+    QUEUE_DRIVER: sync
+redis:
+  image: redis
+  volumes:
+    - ./redis.conf:/usr/local/etc/redis/redis.conf
+  ports:
+    - "6379:6379"
