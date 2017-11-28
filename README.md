@@ -7,15 +7,13 @@ cd matt-tress
 
 ### Configuration
 
-Go to `docker-compose.yml` update your Google API Key
+Go to `docker-compose.yml` update your Google API Key and nginx linked ports (default 80)
 
 ### Build & Run
 
 ```bash
 docker-compose up --build -d
 ```
-
-Navigate to [http://localhost:80](http://localhost:80) and you should see something like this
 
 ### Updating vendor
 
@@ -28,6 +26,8 @@ docker-compose exec php composer update -d /var/www/html/app
 ```bash
 docker-compose exec php php /var/www/html/app/artisan queue:listen
 ```
+
+Everything ready, go to http://YOUR_DOCKER_IP:80/{end_point} for testing
 
 ### Stop Everything
 
