@@ -33,7 +33,9 @@ docker-compose exec php composer update -d /var/www/html/app
 docker-compose exec php php /var/www/html/app/artisan queue:listen
 ```
 
-### Everything ready, go to http://YOUR_DOCKER_IP:{PORT}/{end_point} for testing
+### When everything ready, go to http://YOUR_DOCKER_IP:{PORT}/{ENG_POINT} for testing
+
+### Endpoint please refer to original document
 
 ### Stop Everything
 
