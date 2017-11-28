@@ -37,7 +37,7 @@ docker-compose exec php php /var/www/html/app/artisan queue:listen
 
 ### Endpoint please refer to original document
 
-### Stop Everything
+### To stop Everything
 
 ```bash
 docker-compose down
