@@ -8,8 +8,6 @@ nginx:
 php:
   user: "${UID}"
   build: images/php
-  volumes:
-    - ./app:/var/www/html/app
   working_dir: /var/www/html/app/public
   command: php-fpm
   links:

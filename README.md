@@ -21,12 +21,6 @@ Go to `docker-compose.yml` update your Google API Key and nginx linked ports (de
 docker-compose up --build -d
 ```
 
-### Updating vendor
-
-```bash
-docker-compose exec php composer update -d /var/www/html/app
-```
-
 ### Starting queue
 
 ```bash

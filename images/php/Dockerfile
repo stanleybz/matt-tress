@@ -14,3 +14,8 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
+
+COPY ./app /var/www/html/app
+WORKDIR /var/www/html/app
+
+RUN composer install --prefer-source --no-interaction
