@@ -19,14 +19,6 @@ class Route
         $this->uniqid = $this->getUUID();
     }
 
-    public function debug()
-    {
-        $redis = Redis::connection();
-        // print_r($redis->set('name', 'Taylor'));
-        $all_keys = $redis->keys('*');
-        print_r($all_keys);
-    }
-
     public function submit()
     {
         $input = $this->request->input();
