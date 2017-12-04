@@ -19,7 +19,7 @@ php:
     APP_DEBUG: 'true'
     APP_TIMEZONE: UTC
     MAX_TIMEOUT: 240
-    GOOGLE_MAP_KEY: AIzaSyA_ORU75g2w6YxQBjgQx_E0iqRNzP1k-MI
+    GOOGLE_MAP_KEY: #####_____YOUR_API_KEY_HERE_____#####
     CACHE_DRIVER: array
     QUEUE_DRIVER: sync
 redis:
